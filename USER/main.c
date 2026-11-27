@@ -84,7 +84,8 @@ int main(void)
 
 
     // 3. 主迴圈 (保持低負載，由 USART1 中斷接收藍芽指令)
-    while (1)
+
+while (1)
     {
         // 可在此處加入其他非阻塞邏輯
     }
@@ -305,7 +306,7 @@ void USART1_Configuration(void)
 
     // PA10 (USART1_RX) 配置為浮空輸入
     GPIO_InitStructure.GPIO_Pin = GPIO_Pin_10;
-    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING;
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPU;
     GPIO_Init(GPIOA, &GPIO_InitStructure);
 
 
